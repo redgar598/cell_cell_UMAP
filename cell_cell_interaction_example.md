@@ -46,19 +46,19 @@ self_interactions = F, label_cell_type = T
 plot_gene_UMAP_color_bycelltype(d10x, "annotation",cell_cell_connections)
 ```
 
-![](README_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
+![](cell_cell_interaction_example_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
 
 ``` r
 plot_gene_UMAP_color_bycelltype(d10x, "annotation",cell_cell_connections, self_interactions = T)
 ```
 
-![](README_files/figure-gfm/unnamed-chunk-4-2.png)<!-- -->
+![](cell_cell_interaction_example_files/figure-gfm/unnamed-chunk-4-2.png)<!-- -->
 
 ``` r
 plot_gene_UMAP_color_bycelltype(d10x, "annotation",cell_cell_connections,ligand_cell_type = "cDC2", label_cell_type=F)
 ```
 
-![](README_files/figure-gfm/unnamed-chunk-4-3.png)<!-- -->
+![](cell_cell_interaction_example_files/figure-gfm/unnamed-chunk-4-3.png)<!-- -->
 
 ## Colour UMAP by expression of two genes
 
@@ -80,19 +80,19 @@ Defaults: ligand_cell_type = NA, self_interactions = F, label_cell_type
 plot_gene_UMAP_exp_colored(d10x,"annotation" ,cell_cell_connections, ligand = "CCL3", receptor="CCR1")
 ```
 
-![](README_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
+![](cell_cell_interaction_example_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
 
 ``` r
 plot_gene_UMAP_exp_colored(d10x,"annotation" ,cell_cell_connections, ligand = "CCL3", receptor="CCR1", percentile = 0.9)
 ```
 
-![](README_files/figure-gfm/unnamed-chunk-5-2.png)<!-- -->
+![](cell_cell_interaction_example_files/figure-gfm/unnamed-chunk-5-2.png)<!-- -->
 
 ``` r
 plot_gene_UMAP_exp_colored(d10x,"annotation" ,cell_cell_connections, ligand = "CCL3", receptor="CCR1",ligand_cell_type = "cDC2")
 ```
 
-![](README_files/figure-gfm/unnamed-chunk-5-3.png)<!-- -->
+![](cell_cell_interaction_example_files/figure-gfm/unnamed-chunk-5-3.png)<!-- -->
 
 ## Using cellphonedb output
 
@@ -117,13 +117,13 @@ head(cell_cell_connections)
 plot_gene_UMAP_exp_colored(d10x,"annotation" ,cell_cell_connections, ligand = "CCL3", receptor="CCR1")
 ```
 
-![](README_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
+![](cell_cell_interaction_example_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
 
 ``` r
 plot_gene_UMAP_exp_colored(d10x,"annotation" ,cell_cell_connections,ligand_cell_type = "pDC",ligand = "CCL3", receptor="CCR1")
 ```
 
-![](README_files/figure-gfm/unnamed-chunk-6-2.png)<!-- -->
+![](cell_cell_interaction_example_files/figure-gfm/unnamed-chunk-6-2.png)<!-- -->
 
 ## Using CellChat output
 
@@ -160,6 +160,8 @@ library(CellChat)
 
 ``` r
 load("../../Downloads/cellchat_merged.RData")
+
+
 
 df.net <- subsetCommunication(cellchat)
 head(df.net$Healthy)
@@ -205,4 +207,4 @@ d10x$annotation<-as.character(d10x$annotation)
 plot_gene_UMAP_exp_colored(d10x,"annotation" ,cell_cell_connections,ligand_cell_type = "CD8T",ligand = "HLA-B", receptor="CD8A")
 ```
 
-![](README_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->
+![](cell_cell_interaction_example_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->

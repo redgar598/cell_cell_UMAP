@@ -88,8 +88,6 @@ d10x in this example is a seurat object which the cellchat was run on. "annotati
 library(CellChat)
 load("../../Downloads/cellchat_merged.RData")
 
-
-
 df.net <- subsetCommunication(cellchat)
 head(df.net$Healthy)
 

@@ -70,7 +70,7 @@ plot_gene_UMAP_color_bycelltype<-function(seurat_object, cell_type_col, cell_cel
                        legend.position = "none")+
     geom_point(aes(UMAP_1,UMAP_2), data=plt, size = 0.6, colour= "black", stroke = 1)+
     geom_point(aes(UMAP_1,UMAP_2, color=!!sym(cell_type_col)), data=plt,size=0.5)+
-    annotate("rect", xmin = min(plt$UMAP_1) * 1.1, xmax = max(plt$UMAP_1) * 1.1, ymin = min(plt$UMAP_2) * 1.1, ymax = max(plt$UMAP_2) * 1.1, fill = "white", alpha = 0.05)+
+    annotate("rect", xmin = min(plt$UMAP_1) * 1.1, xmax = max(plt$UMAP_1) * 1.1, ymin = min(plt$UMAP_2) * 1.1, ymax = max(plt$UMAP_2) * 1.1, fill = "white", alpha = 0.75)+
     geom_point(aes(mean_umap1,mean_umap2, fill=!!sym(cell_type_col)), data=plt_median,size=2, shape=21)+
     geom_curve(
       data = cell_cell_connections_median,
@@ -195,7 +195,7 @@ plot_gene_UMAP_exp_colored<-function(seurat_object,cell_type_col, cell_cell_conn
     geom_point(aes(UMAP_1,UMAP_2),plt, color="grey",size=0.75)+
     geom_point(aes(UMAP_1,UMAP_2, color=color),plt_point_color, size=0.5)+
     scale_color_manual(values=c("#88a000","#b80783","#03008e"))+
-    annotate("rect", xmin = min(plt$UMAP_1) * 1.1, xmax = max(plt$UMAP_1) * 1.1, ymin = min(plt$UMAP_2) * 1.1, ymax = max(plt$UMAP_2) * 1.1, fill = "white", alpha = 0.05)+
+    annotate("rect", xmin = min(plt$UMAP_1) * 1.1, xmax = max(plt$UMAP_1) * 1.1, ymin = min(plt$UMAP_2) * 1.1, ymax = max(plt$UMAP_2) * 1.1, fill = "white", alpha = 0.75)+
     geom_point(aes(mean_umap1,mean_umap2, fill=!!sym(cell_type_col)), data=plt_median,size=2, shape=21)+
     geom_curve(
       data = cell_cell_connections_median,
