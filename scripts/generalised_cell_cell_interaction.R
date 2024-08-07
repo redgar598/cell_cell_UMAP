@@ -75,7 +75,7 @@ plot_gene_UMAP_color_bycelltype<-function(seurat_object, cell_type_col, cell_cel
     geom_curve(
       data = cell_cell_connections_median,
       aes(x = Cell1x, y = Cell1y, xend = Cell2x, yend = Cell2y), 
-      arrow = arrow(length = unit(0.01, "npc"),type = "closed"),
+      arrow = arrow(length = unit(0.02, "npc"),type = "closed"),
       color = "grey10",curvature = -0.3, #-0.3,
       lineend = "round") +  
     annotate("segment", 
@@ -200,7 +200,7 @@ plot_gene_UMAP_exp_colored<-function(seurat_object,cell_type_col, cell_cell_conn
     geom_curve(
       data = cell_cell_connections_median,
       aes(x = Cell1x, y = Cell1y, xend = Cell2x, yend = Cell2y), 
-      arrow = arrow(length = unit(0.01, "npc"),type = "closed"),
+      arrow = arrow(length = unit(0.02, "npc"),type = "closed"),
       color = "grey10",curvature = -0.3, #-0.3,
       lineend = "round") +  
     annotate("segment", 
