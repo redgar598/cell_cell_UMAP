@@ -134,31 +134,7 @@ d10x in this example is a seurat object which the cellchat was run on.
 “annotation” is the name of the cell label column in that seurat object.
 
 ``` r
-library(CellChat)
-```
-
-    ## Loading required package: igraph
-
-    ## 
-    ## Attaching package: 'igraph'
-
-    ## The following objects are masked from 'package:dplyr':
-    ## 
-    ##     as_data_frame, groups, union
-
-    ## The following object is masked from 'package:Seurat':
-    ## 
-    ##     components
-
-    ## The following objects are masked from 'package:stats':
-    ## 
-    ##     decompose, spectrum
-
-    ## The following object is masked from 'package:base':
-    ## 
-    ##     union
-
-``` r
+suppressMessages(library(CellChat))
 load("../../Downloads/cellchat_merged.RData")
 
 df.net <- subsetCommunication(cellchat)

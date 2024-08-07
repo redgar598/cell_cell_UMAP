@@ -85,7 +85,7 @@ This code is an example of the function to format CellChat data to structure it 
 
 d10x in this example is a seurat object which the cellchat was run on. "annotation" is the name of the cell label column in that seurat object. 
 ```{r}
-library(CellChat)
+suppressMessages(library(CellChat))
 load("../../Downloads/cellchat_merged.RData")
 
 df.net <- subsetCommunication(cellchat)
